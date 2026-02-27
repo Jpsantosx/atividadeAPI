@@ -195,7 +195,6 @@ header{
     line-height: 1;
     margin-bottom: 10px;
     background: linear-gradient(45deg, #facc15, #f97316);
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.3));
 }
@@ -261,7 +260,6 @@ header{
     margin-bottom: 10px;
     /* Gradiente invertido para diferenciar da 404 */
     background: linear-gradient(45deg, #f97316, #ef4444); 
-    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.4));
     animation: pulseError 2s infinite;
