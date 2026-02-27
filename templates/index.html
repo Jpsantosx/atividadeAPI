@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/staly.css">
+    <title>Dragon Ball Search</title>
+</head>
+
+<body>
+
+<header>
+    <h2>🐉 Dragon Ball Power Search</h2>
+</header>
+
+<div class="hero">
+    <form method="POST" class="search-box">
+        <input name="power" placeholder="Digite o nome do personagem ex: Goku">
+        <button>Buscar</button>
+    </form>
+</div>
+
+<!-- CENTRALIZAÇÃO REAL -->
+<div class="result-area">
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <p class="erro">{{ messages[0] }}</p>
+        {% endif %}
+    {% endwith %}
+
+    {% if sucesso %}
+    <div class="card">
+        <div class="img-box">
+            <img src="{{ image }}">
+        </div>
+
+        <div class="info">
+            <h2>{{ name }}</h2>
+            <p class="race">{{ race }} - {{ gender }}</p>
+
+            <p><b>Base KI:</b> {{ ki }}</p>
+            <p><b>Max KI:</b> {{ maxKi }}</p>
+
+            <p class="desc">{{ description }}</p>
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
