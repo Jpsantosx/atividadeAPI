@@ -59,6 +59,13 @@ def index():
         image=dados[6]
     )
 
+@app.errorhandler(404)
+def pagina_nao_encontrada(e):
+    return render_template('erro404.html')
+
+@app.errorhandler(500)
+def pagina_nao_encontrada(e):
+    return render_template('erro500.html')
 
 if __name__ == "__main__":
     app.run(debug=True)

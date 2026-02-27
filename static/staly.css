@@ -166,3 +166,128 @@ header{
     color:#f87171;
     margin-top:15px;
 }
+
+/* ===== PÁGINA DE ERRO 404 ===== */
+#erro404 {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#erro404 .content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    width: 100%;
+    animation: fadeUp 0.6s ease-out;
+}
+
+#erro404 h1 {
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+    background: linear-gradient(45deg, #facc15, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 15px rgba(250, 204, 21, 0.3));
+}
+
+#erro404 h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+#erro404 p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ===== BOTÃO VOLTAR ===== */
+.btn-voltar {
+    display: inline-block;
+    padding: 14px 30px;
+    background: linear-gradient(45deg, #facc15, #f97316);
+    color: #020617;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(250, 204, 21, 0.2);
+}
+
+.btn-voltar:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+    filter: brightness(1.1);
+}
+
+/* ===== PÁGINA DE ERRO 500 (ERRO DE SERVIDOR) ===== */
+#erro500 {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#erro500 .content {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    padding: 50px 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    max-width: 550px;
+    width: 100%;
+    animation: fadeUp 0.6s ease-out; /* Reutilizando sua animação original */
+}
+
+#erro500 h1 {
+    font-size: 120px;
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 10px;
+    /* Gradiente invertido para diferenciar da 404 */
+    background: linear-gradient(45deg, #f97316, #ef4444); 
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.4));
+    animation: pulseError 2s infinite;
+}
+
+#erro500 h2 {
+    font-size: 28px;
+    color: white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#erro500 p {
+    color: #cbd5e1;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ===== ANIMAÇÃO DE PULSAR PARA O ERRO 500 ===== */
+@keyframes pulseError {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+/* O botão .btn-voltar já foi estilizado na 404, 
+   então ele herdará o estilo automaticamente se estiver no mesmo arquivo CSS */
